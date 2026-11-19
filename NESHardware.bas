@@ -1523,7 +1523,7 @@ Public Sub map40_write(Address As Long, value As Byte)
     End Select
 End Sub
 Public Sub map66_write(Address As Long, value As Byte)
-    reg8 = (value \ &H10) And &H3
+    reg8 = 4 * ((value \ &H10) And &H3)
     regA = reg8 + 1
     regC = reg8 + 2
     regE = reg8 + 3
